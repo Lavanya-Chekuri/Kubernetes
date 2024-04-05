@@ -4,7 +4,6 @@ metadata:
   name: customer
   labels:
     app: packersmovers
-    tier: backend
 spec:
   strategy:
     type: Recreate
@@ -16,11 +15,10 @@ spec:
     metadata:
       labels:
         app: packersmovers
-        tier: backend
     spec:
       containers:
       - name: customer
-        image: 936141866242.dkr.ecr.ap-south-1.amazonaws.com/customer:v2
+        image: 637423236688.dkr.ecr.ap-south-1.amazonaws.com/customer:1
         imagePullPolicy: Always
         ports:
         - containerPort: 8081
